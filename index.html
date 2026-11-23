@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Talento Financiero by BIDA · Contabilidad y tributos con tecnología</title>
+<meta name="description" content="Contabilidad, IVA, ISLR y parafiscales para empresas en Venezuela. Inteligencia artificial y contadores que responden por cada cifra. Solicite su diagnóstico gratuito.">
+<meta property="og:title" content="Talento Financiero by BIDA">
+<meta property="og:description" content="El SENIAT ya trabaja con tecnología. Su contabilidad también. Solicite su diagnóstico gratuito.">
+<meta property="og:image" content="https://anadonnella.github.io/talentofinanciero/assets/og-tf.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/logo-tf.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#164186; --navy-d:#0d2a5c; --navy-dd:#081b3d;
+  --orange:#FF7B21; --orange-d:#e5650f; --orange-l:#FFF1E6;
+  --ink:#1c2433; --muted:#5a6477; --line:#e3e8f1; --bg:#ffffff; --soft:#f5f7fb;
+  --r:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;font-size:16px}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+h1,h2,h3{line-height:1.15}
+h2{font-family:'Fraunces',Georgia,serif;font-size:clamp(28px,4vw,42px);color:var(--navy-dd);letter-spacing:-.01em}
+.eyebrow{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--orange-d);margin-bottom:12px}
+.lead{font-size:18px;color:var(--muted);max-width:680px;margin-top:14px}
+section{padding:88px 0}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:999px;font-weight:700;text-decoration:none;font-size:16px;border:2px solid transparent;cursor:pointer;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-o{background:var(--orange);color:#fff}
+.btn-o:hover{background:var(--orange-d)}
+.btn-g{border-color:rgba(255,255,255,.5);color:#fff}
+.btn-g:hover{background:rgba(255,255,255,.1)}
+.btn svg{width:20px;height:20px;flex:none}
+
+/* nav */
+nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand img{width:46px;height:46px}
+.brand b{font-size:17px;color:var(--navy-dd)}
+.brand small{display:block;font-size:12px;color:var(--orange-d);font-weight:700;letter-spacing:.06em}
+.navlinks{display:flex;gap:26px;align-items:center}
+.navlinks a{text-decoration:none;font-weight:600;font-size:15px;color:var(--muted)}
+.navlinks a:hover{color:var(--navy)}
+.navlinks .btn{padding:10px 20px;font-size:14px;color:#fff}
+@media(max-width:860px){.navlinks a:not(.btn){display:none}}
+
+/* hero */
+.hero{position:relative;background:radial-gradient(1200px 600px at 85% 10%,#1f56b0 0%,transparent 60%),linear-gradient(160deg,var(--navy) 0%,var(--navy-dd) 100%);color:#fff;overflow:hidden;padding:96px 0 104px}
+.hero svg.net{position:absolute;right:-120px;top:-60px;width:720px;height:720px;opacity:.22;pointer-events:none}
+.hero .wrap{position:relative}
+.hero .eyebrow{color:#ffb27a}
+.hero h1{font-family:'Fraunces',Georgia,serif;font-size:clamp(36px,6vw,66px);font-weight:700;max-width:820px;letter-spacing:-.015em}
+.hero h1 em{font-style:normal;color:var(--orange)}
+.hero p.sub{font-size:clamp(17px,2vw,20px);color:#d6e0f5;max-width:640px;margin:22px 0 34px}
+.ctas{display:flex;gap:14px;flex-wrap:wrap}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:64px;max-width:820px}
+.stat{border-left:3px solid var(--orange);padding-left:14px}
+.stat b{display:block;font-size:22px}
+.stat span{font-size:14px;color:#c2cfea}
+@media(max-width:640px){.stats{grid-template-columns:1fr}}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center}
+.promise{margin-top:26px;background:var(--orange-l);border-left:5px solid var(--orange);padding:20px 22px;border-radius:0 var(--r) var(--r) 0;font-weight:600;color:var(--navy-dd)}
+.diffs{display:grid;gap:16px}
+.diff{display:flex;gap:16px;padding:22px;border:1px solid var(--line);border-radius:var(--r);background:#fff}
+.diff .ic{flex:none;width:48px;height:48px;border-radius:12px;background:var(--navy);display:grid;place-items:center}
+.diff .ic svg{width:24px;height:24px;stroke:#fff}
+.diff h3{font-size:18px;color:var(--navy-dd);margin-bottom:4px}
+.diff p{color:var(--muted);font-size:15px}
+@media(max-width:860px){.about-grid{grid-template-columns:1fr;gap:36px}}
+
+/* cards */
+.soft{background:var(--soft)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px;margin-top:40px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px;position:relative}
+.card .n{font-size:13px;font-weight:800;color:var(--orange-d)}
+.card h3{font-size:18px;color:var(--navy-dd);margin:6px 0 8px}
+.card p{font-size:15px;color:var(--muted)}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:4px 10px;border-radius:999px;background:var(--orange-l);color:var(--orange-d);margin-top:12px}
+.monthly{margin-top:36px;background:var(--navy-dd);color:#fff;border-radius:var(--r);padding:32px;display:grid;grid-template-columns:240px 1fr;gap:28px}
+.monthly h3{font-family:'Fraunces',serif;font-size:26px}
+.monthly ul{list-style:none;display:grid;gap:12px}
+.monthly li{padding-left:28px;position:relative;color:#d6e0f5}
+.monthly li:before{content:"";position:absolute;left:0;top:7px;width:14px;height:14px;border-radius:50%;background:var(--orange)}
+@media(max-width:760px){.monthly{grid-template-columns:1fr}}
+
+/* audit banner */
+.audit{background:linear-gradient(120deg,var(--orange) 0%,#ff9a4d 100%);color:#fff;border-radius:22px;padding:44px;display:grid;grid-template-columns:1.4fr auto;gap:30px;align-items:center}
+.audit h2{color:#fff}
+.audit p{color:#fff6ef;margin-top:10px;font-size:17px;max-width:620px}
+.audit .btn{background:var(--navy-dd);color:#fff}
+@media(max-width:760px){.audit{grid-template-columns:1fr;padding:30px}}
+
+/* sectors */
+.chips{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.chip{padding:12px 20px;border-radius:999px;border:1.5px solid var(--line);background:#fff;font-weight:600;color:var(--navy-dd)}
+.chip.o{border-color:var(--orange);color:var(--orange-d)}
+
+/* parafiscales */
+.pf{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:40px}
+.pf .card{padding:30px}
+.pf .card h3{font-size:22px}
+.pf ul{margin-top:14px;padding-left:20px;color:var(--muted)}
+.pf li{margin-bottom:6px}
+.orgs{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.org{background:var(--navy);color:#fff;font-weight:700;font-size:14px;padding:8px 16px;border-radius:10px}
+@media(max-width:760px){.pf{grid-template-columns:1fr}}
+
+/* tech */
+.tech .card{border-top:4px solid var(--navy)}
+.tech .card.star{border-top-color:var(--orange);background:linear-gradient(180deg,#fff 0%,#fff8f2 100%)}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px;counter-reset:s}
+.step{padding:26px;border-radius:var(--r);background:#fff;border:1px solid var(--line)}
+.step:before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--orange);color:#fff;font-weight:800;margin-bottom:14px}
+.step h3{font-size:18px;color:var(--navy-dd);margin-bottom:6px}
+.step p{font-size:15px;color:var(--muted)}
+@media(max-width:860px){.steps{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.steps{grid-template-columns:1fr}}
+
+/* quote form */
+.quote{background:linear-gradient(160deg,var(--navy) 0%,var(--navy-dd) 100%);color:#fff}
+.quote h2{color:#fff}
+.quote .lead{color:#c9d6f0}
+.qgrid{display:grid;grid-template-columns:1.3fr 1fr;gap:28px;margin-top:40px}
+.panel{background:#fff;color:var(--ink);border-radius:20px;padding:28px}
+.panel h3{font-size:17px;color:var(--navy-dd);margin:18px 0 10px}
+.panel h3:first-child{margin-top:0}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.opt{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;border:1.5px solid var(--line);border-radius:10px;cursor:pointer;font-size:14px;font-weight:600;line-height:1.35}
+.opt input{margin-top:2px;accent-color:var(--orange);width:17px;height:17px;flex:none}
+.opt:has(input:checked){border-color:var(--orange);background:var(--orange-l)}
+@media(max-width:560px){.opts{grid-template-columns:1fr}}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:14px;font-weight:700;margin-bottom:6px;color:var(--navy-dd)}
+.field input,.field textarea{width:100%;padding:12px 14px;border:1.5px solid var(--line);border-radius:10px;font:inherit;font-size:15px}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--navy)}
+.send{display:grid;gap:10px;margin-top:8px}
+.send .btn{justify-content:center;width:100%}
+.btn-wa{background:#25D366;color:#fff}
+.btn-wa:hover{background:#1fb457}
+.btn-mail{background:var(--navy);color:#fff}
+.err{color:#c0392b;font-size:14px;font-weight:600;min-height:20px}
+.note{font-size:13px;color:var(--muted);margin-top:10px}
+@media(max-width:860px){.qgrid{grid-template-columns:1fr}}
+
+/* footer */
+footer{background:var(--navy-dd);color:#b9c6e2;padding:48px 0 28px;font-size:15px}
+.fgrid{display:flex;flex-wrap:wrap;justify-content:space-between;gap:28px;align-items:flex-start}
+footer .brand b{color:#fff}
+footer a{color:#fff;text-decoration:none}
+footer a:hover{color:var(--orange)}
+.fcontact{display:grid;gap:8px}
+.legal{border-top:1px solid rgba(255,255,255,.12);margin-top:32px;padding-top:20px;font-size:13px;color:#8796b8}
+
+.wa-float{position:fixed;right:18px;bottom:18px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+.wa-float svg{width:30px;height:30px;fill:#fff}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#inicio"><img src="assets/logo-tf.png" alt="Logo Talento Financiero"><span><b>Talento Financiero</b><small>BY BIDA</small></span></a>
+    <div class="navlinks">
+      <a href="#servicios">Servicios</a>
+      <a href="#parafiscales">Parafiscales</a>
+      <a href="#tecnologia">Tecnología</a>
+      <a href="#como">Cómo empezamos</a>
+      <a class="btn btn-o" href="#cotizar">Cotizar</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="inicio">
+  <svg class="net" viewBox="0 0 400 400" fill="none" stroke="#fff" stroke-width="1.4" aria-hidden="true">
+    <circle cx="200" cy="200" r="180"/><ellipse cx="200" cy="200" rx="90" ry="180"/><ellipse cx="200" cy="200" rx="180" ry="70"/>
+    <path d="M30 140 L200 60 L330 120 L370 260 L240 340 L80 300 Z M200 60 L240 340 M30 140 L370 260 M80 300 L330 120"/>
+    <g fill="#FF7B21" stroke="none"><circle cx="200" cy="60" r="7"/><circle cx="330" cy="120" r="6"/><circle cx="370" cy="260" r="7"/><circle cx="240" cy="340" r="6"/><circle cx="80" cy="300" r="6"/><circle cx="30" cy="140" r="7"/><circle cx="200" cy="200" r="8"/></g>
+  </svg>
+  <div class="wrap">
+    <span class="eyebrow">Contabilidad · Tributos · Tecnología</span>
+    <h1>El SENIAT ya trabaja con tecnología. <em>Su contabilidad también.</em></h1>
+    <p class="sub">Combinamos inteligencia artificial con contadores que responden por cada cifra. Su empresa cumple a tiempo, no paga ni un bolívar de más de lo que la ley exige, y usted trabaja con la tranquilidad de tenerlo todo en orden.</p>
+    <div class="ctas">
+      <a class="btn btn-o" href="https://wa.me/584242557764?text=Hola%20Talento%20Financiero%2C%20quiero%20solicitar%20un%20diagn%C3%B3stico%20gratuito%20para%20mi%20empresa." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 2.5 1 3 .8 3.6.8.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>
+        Diagnóstico gratuito</a>
+      <a class="btn btn-g" href="#cotizar">Cotizar servicios</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>+25 años</b><span>de experiencia en finanzas corporativas</span></div>
+      <div class="stat"><b>Humano + IA</b><span>tecnología que procesa, contadores que responden</span></div>
+      <div class="stat"><b>100% venezolano</b><span>IVA, ISLR, retenciones y parafiscales</span></div>
+    </div>
+  </div>
+</header>
+
+<section id="nosotros">
+  <div class="wrap about-grid">
+    <div>
+      <span class="eyebrow">Quiénes somos</span>
+      <h2>Somos Talento Financiero by BIDA</h2>
+      <p class="lead">Talento Financiero es la marca de BIDA Global 21, C.A. para la contabilidad y la asesoría tributaria de empresas. Nuestro equipo suma más de 25 años en finanzas corporativas y parte de una convicción: ninguna empresa debe pagar más impuestos de los que le corresponden.</p>
+      <div class="promise">Nuestra promesa: que su empresa no pague ni un bolívar de más de lo que la ley exige, y que cumpla a tiempo.</div>
+    </div>
+    <div class="diffs">
+      <div class="diff"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 9h6v6H9z"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/></svg></div><div><h3>Humano + IA</h3><p>La inteligencia artificial procesa, ordena y calcula; nuestros contadores revisan, interpretan y responden por cada cifra.</p></div></div>
+      <div class="diff"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></div><div><h3>Especialistas en lo venezolano</h3><p>IVA, ISLR, retenciones, SENIAT y parafiscales: dominamos la normativa venezolana vigente.</p></div></div>
+      <div class="diff"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18.5 14.8c1.7.8 2.7 2.5 3 5.2"/></svg></div><div><h3>Apoyamos al cliente</h3><p>No solo declaramos: acompañamos a la empresa y respondemos ante el fisco.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="soft" id="servicios">
+  <div class="wrap">
+    <span class="eyebrow">Paquete Base</span>
+    <h2>Contabilidad con impuestos, en una sola tarifa mensual</h2>
+    <p class="lead">Todo lo que su empresa necesita para llevar la contabilidad al día y cumplir con el SENIAT.</p>
+    <div class="cards">
+      <div class="card"><span class="n">01</span><h3>Diagnóstico inicial</h3><p>Revisión del estado contable y tributario de la empresa, con informe de hallazgos y plan de regularización si aplica.</p><span class="tag">Gratuito para empezar</span></div>
+      <div class="card"><span class="n">02</span><h3>Contabilidad</h3><p>Procesamiento mensual de los registros contables según principios de contabilidad de aceptación general.</p></div>
+      <div class="card"><span class="n">03</span><h3>IVA</h3><p>Registro de operaciones, libros de compras y ventas, y declaración mensual del Impuesto al Valor Agregado.</p></div>
+      <div class="card"><span class="n">04</span><h3>ISLR</h3><p>Comprobantes y declaración mensual de retenciones; declaración definitiva anual de la empresa y de sus accionistas.</p></div>
+      <div class="card"><span class="n">05</span><h3>Asesoría integral</h3><p>Consultas administrativas, contables y tributarias por teléfono o correo, en horario de oficina.</p></div>
+      <div class="card"><span class="n">06</span><h3>Reporte financiero mensual con IA</h3><p>Balance de comprobación, libros de bancos, libros del IVA, mayores analíticos y un dashboard de su situación financiera.</p></div>
+      <div class="card"><span class="n">07</span><h3>Asistencia ante fiscalizaciones</h3><p>Acompañamiento presencial y apoyo durante fiscalizaciones del SENIAT o auditorías de los períodos que procesamos.</p></div>
+    </div>
+    <div class="monthly">
+      <h3>Qué recibe cada mes</h3>
+      <ul>
+        <li>Borradores de las declaraciones de IVA y de retenciones de ISLR para su aprobación, antes de cada vencimiento legal.</li>
+        <li>Declaraciones presentadas, con sus certificados y comprobantes.</li>
+        <li>Comprobantes de retención de ISLR el mismo día en que los solicita (antes de las 3:00 p.m.), si su sistema no los emite.</li>
+        <li>Antes del día 15, en su carpeta digital: libros de compras y ventas, balance de comprobación, relaciones de retenciones y el dashboard financiero del mes.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="audit">
+      <div>
+        <span class="eyebrow" style="color:#fff">Auditoría tributaria</span>
+        <h2>Conozca su riesgo fiscal antes que el SENIAT</h2>
+        <p>Revisamos sus declaraciones, libros y retenciones para detectar contingencias, créditos fiscales no aprovechados y errores que pueden convertirse en multas. Usted decide con información, no con sorpresas.</p>
+      </div>
+      <a class="btn" href="#cotizar" data-check="Auditoría tributaria">Quiero mi auditoría</a>
+    </div>
+  </div>
+</section>
+
+<section class="soft" style="padding-top:72px">
+  <div class="wrap">
+    <span class="eyebrow">A quién atendemos</span>
+    <h2>Contabilidad para cada tipo de empresa</h2>
+    <p class="lead">Adaptamos el servicio a la actividad, el tamaño y la condición tributaria de cada cliente, incluidos sectores con regulación especial.</p>
+    <div class="chips">
+      <span class="chip">Comercio</span><span class="chip">Servicios</span><span class="chip">Manufactura</span><span class="chip">Tecnología</span><span class="chip">Sectores regulados</span><span class="chip">Organizaciones sin fines de lucro</span>
+      <span class="chip o">Contribuyentes ordinarios</span><span class="chip o">Contribuyentes formales</span><span class="chip o">Sujetos pasivos especiales</span>
+    </div>
+  </div>
+</section>
+
+<section id="parafiscales">
+  <div class="wrap">
+    <span class="eyebrow">Parafiscales</span>
+    <h2>Lo inscribimos y lo mantenemos al día</h2>
+    <p class="lead">Nos ocupamos de las inscripciones ante cada organismo y de la gestión de todos los meses, para que su empresa conserve sus solvencias.</p>
+    <div class="pf">
+      <div class="card"><span class="n">PASO 1</span><h3>Inscripciones</h3><ul><li>Registro de la empresa ante los organismos que le correspondan.</li><li>Actualización de datos y registros existentes.</li><li>Regularización de inscripciones pendientes.</li></ul></div>
+      <div class="card"><span class="n">TODOS LOS MESES</span><h3>Gestión mensual completa</h3><ul><li>Determinación y cálculo de aportes y cotizaciones.</li><li>Declaraciones y pagos.</li><li>Movimientos de trabajadores y emisión de solvencias.</li></ul></div>
+    </div>
+    <div class="orgs"><span class="org">INCES</span><span class="org">IVSS</span><span class="org">FAOV · BANAVIH</span><span class="org">MINTRA</span><span class="org">FONACIT</span><span class="org">RUPDAE</span><span class="org">LPP · Pensiones</span></div>
+  </div>
+</section>
+
+<section class="soft tech" id="tecnologia">
+  <div class="wrap">
+    <span class="eyebrow">Tecnología junto a BIDA</span>
+    <h2>Herramientas que ponen su empresa al ritmo del fisco digital</h2>
+    <p class="lead">Se cotizan según el tamaño y las necesidades de cada empresa.</p>
+    <div class="cards">
+      <div class="card star"><h3>Facturación digital con sistema de gestión</h3><p>Emisión de facturas digitales integrada a un sistema de gestión para su negocio.</p><span class="tag">Distribuidores autorizados</span></div>
+      <div class="card"><h3>Nube Total</h3><p>Arquitectura, digitalización y resguardo de toda su documentación en Microsoft 365 o Suite Google, con control de accesos y respaldos.</p></div>
+      <div class="card"><h3>G-Factura</h3><p>Sistema de emisión y control de facturas.</p></div>
+      <div class="card"><h3>ERP</h3><p>Implementación de un sistema administrativo integrado según las necesidades del negocio.</p></div>
+      <div class="card"><h3>Agentes de IA</h3><p>Agentes de inteligencia artificial que automatizan procesos administrativos de la empresa.</p></div>
+      <div class="card"><h3>Lucy Tesorería</h3><p>Conciliación bancaria y control de caja en tiempo real.</p></div>
+      <div class="card star"><h3>Lucy Tributos</h3><p>Concilia sus ingresos facturados contra las entradas en sus bancos: el mismo cruce que hoy hace el SENIAT. Detecte las diferencias antes de que lo expongan.</p><span class="tag">Más expuesto, más riesgo</span></div>
+      <div class="card"><h3>Compliance (Agile Check)</h3><p>Preparación para procesos de cumplimiento normativo y evaluación por bancos, socios o inversionistas.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="adicionales">
+  <div class="wrap">
+    <span class="eyebrow">Servicios a demanda</span>
+    <h2>Cuando los necesite</h2>
+    <p class="lead">Servicios puntuales que se cotizan por separado.</p>
+    <div class="cards">
+      <div class="card"><h3>Auditoría tributaria</h3><p>Conozca su riesgo fiscal: revisión especial de registros, libros y declaraciones.</p></div>
+      <div class="card"><h3>Balances</h3><p>Preparación de balance general para fines específicos.</p></div>
+      <div class="card"><h3>Certificaciones</h3><p>Certificación de ingresos u otra información financiera.</p></div>
+      <div class="card"><h3>RNC</h3><p>Inscripción o actualización en el Registro Nacional de Contratistas.</p></div>
+      <div class="card"><h3>Créditos</h3><p>Expediente financiero para solicitudes de crédito bancario.</p></div>
+      <div class="card"><h3>Licitaciones</h3><p>Documentación financiera y legal para licitaciones.</p></div>
+      <div class="card"><h3>Constitución de empresas</h3><p>Trámites de constitución y registro de una nueva empresa.</p></div>
+      <div class="card"><h3>Proyecciones y plan de negocios</h3><p>Proyecciones financieras, factibilidad económica, planes de negocio y proyectos.</p></div>
+      <div class="card"><h3>Estructuras de costos</h3><p>Costos especializados para manufactura, servicios y tecnología.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="soft" id="como">
+  <div class="wrap">
+    <span class="eyebrow">Cómo empezamos</span>
+    <h2>Cuatro pasos para tener todo en orden</h2>
+    <div class="steps">
+      <div class="step"><h3>Diagnóstico gratuito</h3><p>Conversamos y revisamos la situación contable y tributaria de su empresa.</p></div>
+      <div class="step"><h3>Propuesta personalizada</h3><p>Le enviamos los servicios y la inversión que se ajustan a su empresa.</p></div>
+      <div class="step"><h3>Acuerdo de servicios</h3><p>Firmamos el acuerdo con el alcance, los procedimientos y las condiciones.</p></div>
+      <div class="step"><h3>Arranque</h3><p>Recibimos su documentación de inicio y comenzamos a trabajar.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="quote" id="cotizar">
+  <div class="wrap">
+    <span class="eyebrow" style="color:#ffb27a">Cotice aquí</span>
+    <h2>Arme su solicitud en un minuto</h2>
+    <p class="lead">Marque los servicios que le interesan, déjenos sus datos y envíe la solicitud por WhatsApp o por correo. Le respondemos con un diagnóstico y una propuesta a su medida.</p>
+    <form class="qgrid" id="qform" novalidate>
+      <div class="panel">
+        <h3>Contabilidad e impuestos</h3>
+        <div class="opts">
+          <label class="opt"><input type="checkbox" name="s" value="Paquete Base: Contabilidad con Impuestos">Paquete Base: contabilidad con impuestos</label>
+          <label class="opt"><input type="checkbox" name="s" value="Auditoría tributaria">Auditoría tributaria</label>
+          <label class="opt"><input type="checkbox" name="s" value="Parafiscales: inscripciones">Parafiscales: inscripciones</label>
+          <label class="opt"><input type="checkbox" name="s" value="Parafiscales: gestión mensual">Parafiscales: gestión mensual</label>
+        </div>
+        <h3>Tecnología</h3>
+        <div class="opts">
+          <label class="opt"><input type="checkbox" name="s" value="Facturación digital con sistema de gestión">Facturación digital con sistema de gestión</label>
+          <label class="opt"><input type="checkbox" name="s" value="Nube Total">Nube Total</label>
+          <label class="opt"><input type="checkbox" name="s" value="G-Factura">G-Factura</label>
+          <label class="opt"><input type="checkbox" name="s" value="ERP">ERP</label>
+          <label class="opt"><input type="checkbox" name="s" value="Agentes de IA">Agentes de IA</label>
+          <label class="opt"><input type="checkbox" name="s" value="Lucy Tesorería">Lucy Tesorería</label>
+          <label class="opt"><input type="checkbox" name="s" value="Lucy Tributos">Lucy Tributos</label>
+          <label class="opt"><input type="checkbox" name="s" value="Compliance (Agile Check)">Compliance (Agile Check)</label>
+        </div>
+        <h3>Servicios a demanda</h3>
+        <div class="opts">
+          <label class="opt"><input type="checkbox" name="s" value="Balances">Balances</label>
+          <label class="opt"><input type="checkbox" name="s" value="Certificaciones">Certificaciones</label>
+          <label class="opt"><input type="checkbox" name="s" value="RNC">RNC</label>
+          <label class="opt"><input type="checkbox" name="s" value="Créditos">Créditos</label>
+          <label class="opt"><input type="checkbox" name="s" value="Licitaciones">Licitaciones</label>
+          <label class="opt"><input type="checkbox" name="s" value="Constitución de empresas">Constitución de empresas</label>
+          <label class="opt"><input type="checkbox" name="s" value="Proyecciones y plan de negocios">Proyecciones y plan de negocios</label>
+          <label class="opt"><input type="checkbox" name="s" value="Estructuras de costos">Estructuras de costos</label>
+        </div>
+      </div>
+      <div class="panel">
+        <h3>Sus datos</h3>
+        <div class="field"><label for="nombre">Nombre y apellido *</label><input id="nombre" autocomplete="name"></div>
+        <div class="field"><label for="empresa">Empresa *</label><input id="empresa" autocomplete="organization"></div>
+        <div class="field"><label for="rif">RIF</label><input id="rif" placeholder="J-00000000-0"></div>
+        <div class="field"><label for="tel">Teléfono</label><input id="tel" type="tel" autocomplete="tel"></div>
+        <div class="field"><label for="msg">Comentarios</label><textarea id="msg" rows="3" placeholder="Actividad de la empresa, número de empleados, condición ante el SENIAT…"></textarea></div>
+        <div class="err" id="err" role="alert"></div>
+        <div class="send">
+          <button type="button" class="btn btn-wa" id="sendWa"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 2.5 1 3 .8 3.6.8.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>Enviar por WhatsApp</button>
+          <button type="button" class="btn btn-mail" id="sendMail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>Enviar por correo</button>
+        </div>
+        <p class="note">Al enviar se abre su WhatsApp o su correo con el mensaje listo. No guardamos sus datos en esta página.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <a class="brand" href="#inicio"><img src="assets/logo-tf.png" alt="" style="background:#fff;border-radius:50%"><span><b>Talento Financiero</b><small>BY BIDA</small></span></a>
+      <div class="fcontact">
+        <a href="https://wa.me/584242557764" target="_blank" rel="noopener">WhatsApp: +58 424 255 7764</a>
+        <a href="mailto:talentofinancieroglobal@gmail.com">talentofinancieroglobal@gmail.com</a>
+        <a href="https://www.instagram.com/grupotalentofinanciero/" target="_blank" rel="noopener">Instagram: @grupotalentofinanciero</a>
+      </div>
+    </div>
+    <div class="legal">Talento Financiero es una marca de BIDA Global 21, C.A. · RIF J-50668701-1 · Caracas, Venezuela</div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/584242557764?text=Hola%20Talento%20Financiero%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20servicios." target="_blank" rel="noopener" aria-label="Escríbanos por WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 2.5 1 3 .8 3.6.8.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg></a>
+
+<script>
+(function(){
+  var WA='584242557764', MAIL='talentofinancieroglobal@gmail.com';
+  function v(id){return document.getElementById(id).value.trim();}
+  function build(){
+    var err=document.getElementById('err');
+    var sel=[].slice.call(document.querySelectorAll('input[name="s"]:checked')).map(function(i){return i.value;});
+    if(!v('nombre')||!v('empresa')){err.textContent='Por favor indique su nombre y el nombre de la empresa.';return null;}
+    if(!sel.length){err.textContent='Marque al menos un servicio.';return null;}
+    err.textContent='';
+    var t='Hola Talento Financiero, quiero cotizar sus servicios.\n\n';
+    t+='Nombre: '+v('nombre')+'\nEmpresa: '+v('empresa');
+    if(v('rif'))t+='\nRIF: '+v('rif');
+    if(v('tel'))t+='\nTeléfono: '+v('tel');
+    t+='\n\nServicios de interés:\n- '+sel.join('\n- ');
+    if(v('msg'))t+='\n\nComentarios: '+v('msg');
+    return t;
+  }
+  document.getElementById('sendWa').addEventListener('click',function(){
+    var t=build(); if(!t)return;
+    window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(t),'_blank','noopener');
+  });
+  document.getElementById('sendMail').addEventListener('click',function(){
+    var t=build(); if(!t)return;
+    location.href='mailto:'+MAIL+'?subject='+encodeURIComponent('Solicitud de cotización - '+v('empresa'))+'&body='+encodeURIComponent(t);
+  });
+  // Buttons that pre-check a service
+  [].forEach.call(document.querySelectorAll('[data-check]'),function(a){
+    a.addEventListener('click',function(){
+      var box=document.querySelector('input[name="s"][value="'+a.getAttribute('data-check')+'"]');
+      if(box)box.checked=true;
+    });
+  });
+})();
+</script>
+</body>
+</html>
